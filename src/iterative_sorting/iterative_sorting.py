@@ -6,10 +6,13 @@ def selection_sort(arr):
         # (hint, can do in 3 loc)
         # Your code here
     for i in range(0, len(arr) - 1): #for every element in arr from 0 to the end of arr
-        cur_index = i
-        smallest_index = cur_index
-        while i > 0 and i < len(arr) - 1:
-            arr[i], cur_index = cur_index, arr[i] 
+        #cur_index = i
+        #smallest_index = cur_index
+        min = i
+        for j in range(i + 1, len(arr), + 1):
+            if(arr[j] < arr[min]):
+                min = j
+        arr[min], arr[i] = arr[i], arr[min]
         # TO-DO: swap
         # Your code here
     return arr
